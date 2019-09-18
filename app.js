@@ -1,8 +1,9 @@
-const express = require('express')
-const app = express()
-const port = process.env.PORT || 5000
-// var server = require('http').Server(app);
-var io = require('socket.io')(3000);
+var express = require('express');
+var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+var port = process.env.port || 5000
+
 
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
