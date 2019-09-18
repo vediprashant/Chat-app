@@ -4,7 +4,6 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = process.env.port || 5000
 
-
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 
@@ -41,4 +40,4 @@ app.get('/check', function(req, res){
   });
 
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+http.listen(port, () => console.log(`Example app listening on port ${port}!`))
