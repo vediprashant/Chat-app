@@ -71,7 +71,7 @@
     })
     
 
-        var socket = io.connect('http://localhost:3000');
+        var socket = io();
         socket.on('newmsg', function (data) {
             // if(socket.sessionid == data.uid) return; //dont print our own msgs
             vm.sendExplicitMsg("f",data.msg)
